@@ -1,0 +1,28 @@
+baseURL = "https://codeep.blue/"
+languageCode = "pt-br"
+title = "Codeep.Blue"
+
+googleAnalytics = "UA-XXXXXXXX-XX"
+
+theme = "blue"
+
+[params]
+recents = 5
+contact = "contact@codeep.blue"
+dateformat = "02/01/2006/"
+
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+
+googlefonts = "https://fonts.googleapis.com/css?family=Arvo:400,700"
+fontfamily = "Arvo,sans-serif"
+logofontfamily = "Arvo, cursive"
+pluralizeListTitles = false
+rssLimit = 255
+
+ampscripts = """
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    """
