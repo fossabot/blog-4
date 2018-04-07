@@ -11,7 +11,7 @@ docker:
 build: docker
 
 run:
-	docker run --rm -v $(PWD):/go/src/github.com/$(PROJECT) $(PROJECT)
+	docker run -it --rm -v $(PWD):/go/src/github.com/$(PROJECT) $(PROJECT)
 
 sh:
 	docker run -it --rm -v $(PWD):/go/src/github.com/$(PROJECT) $(PROJECT) sh
