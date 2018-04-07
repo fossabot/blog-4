@@ -45,7 +45,7 @@
 
     <header class="l-header">
       <div class="h-logo p-logo">
-        <a href="{{ .Site.BaseURL }}" class="h-logo"><img width="60" height="60" src="{{ .Site.BaseURL }}/images/logo.png"/></a>
+        <a href="{{ .Site.BaseURL }}" class="h-logo">{{ .Site.Title }}</a>
       </div>
       {{ partial "nav.html" .}}
     </header>
@@ -61,7 +61,7 @@
         <p>{{ with .Site.Copyright }}{{ . | safeHTML }}{{ else }}<span class="h-logo">&copy; {{ .Site.Title }}</span>{{ end }}</p>
         <aside>
           <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_solit" class="h-logo">Solit</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+          <p><a href="https://github.com/codeepblue/blue" class="h-logo">Blue</a> designed by <a href="https://codeep.blue">Codeep.Blue</a>.</p>
         </aside>
       </div>
     </footer>
