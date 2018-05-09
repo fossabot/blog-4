@@ -5,5 +5,6 @@ hugo server \
     --bind $(hostname -i) \
     --port 80 \
     --watch \
+    --disableFastRender \
     --debug \
     --verbose
