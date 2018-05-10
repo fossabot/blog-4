@@ -9,7 +9,7 @@ Docker e o projeto moby se tornaram nos últimos anos um divisor de águas para 
 
 {{% githubcard path="moby/moby" %}}
 
-O docker utiliza por baixo o *LXC*, uma das alternativas de containeres nativas do Linux.
+O docker utiliza por baixo, dentre outras bibliotecas, o *LXC*, uma das alternativas de containeres nativas do Linux.
 
 {{% githubcard path="lxc/lxc" %}}
 
@@ -54,12 +54,12 @@ Para confirmar que está tudo certo vamos rodar nosso primeiro container:
 
 {{% asciinema id="173970" %}}
 
-Executando o comando acima o docker irá buscar pela imagem *hello-world* localmente, se você não a possuir será baixado, o conceito de *imagem* em containeres é bastante simples, um container sempre será uma instância de uma imagem, você pode associar isso a orientação a objetos, onde a imagem do container é sua classe e o container propriamente é um objeto. Existem diversas imagens já disponibilizadas em servidores de imagens conhecidos como *docker registry*, você pode ter o seu próprio ou usar um público como o da própria *Docker Inc.* chamado de [hub](http://hub.docker.com/).
+Executando o comando acima o docker irá buscar pela imagem *hello-world* localmente, se você não a possuir será feito o download. O conceito de *imagem* em containeres é bastante simples, um container sempre será uma instância de uma imagem, você pode associar isso a orientação a objetos, onde a imagem do container é sua classe e o container propriamente é um objeto. Existem diversas imagens já disponibilizadas em servidores de imagens conhecidos como *docker registry*, você pode ter o seu próprio ou usar um público como o da própria *Docker Inc.* chamado de [hub](http://hub.docker.com/).
 
 
 ##### Exemplo real
 
-Vamos agora ver um exemplo real, considerando um cenário de desenvolvimento WEB, normalmente temos um servidor de aplicação, que pode rodar por exemplo um *Nginx* como proxy reverso, e um banco de dados, como por exemplo um *MySQL*.
+Vamos agora ver um exemplo real, considerando um cenário de desenvolvimento WEB, normalmente temos um servidor de aplicação, que pode rodar por exemplo um *Nginx* como proxy reverso, e um banco de dados, como por exemplo o *MySQL*.
 
 Como podemos ver neste cenário teriamos 2 servidores, como estamos utilizando containeres, teremos 2 containeres rodando, um com Nginx e outro com MySQL, e para iniciarmos esses 2 containeres utilizaremos uma outra ferramenta do docker chamada *docker-compose*, que permite gerênciar serviços, e estes serviços por sua vez podem rodar um ou mais containeres.
 
