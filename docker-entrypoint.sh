@@ -2,9 +2,10 @@
 
 hugo server \
     --baseURL http://$(hostname -i) \
+    --cacheDir /tmp/hugo_cache \
     --bind $(hostname -i) \
     --port 80 \
-    --watch \
     --disableFastRender \
-    --debug \
+    --enableGitInfo \
+    --gc \
     --verbose

@@ -12,8 +12,8 @@ RUN cd /srv \
 
 WORKDIR /go/src/github.com/codeepblue/blog
 
-COPY ./docker-entrypoint.sh /docker-entrypoint
+COPY . .
 
-RUN chmod +x /docker-entrypoint
+RUN mkdir /tmp/hugo_cache
 
-CMD ["/docker-entrypoint"]
+ENTRYPOINT ["sh", "./docker-entrypoint.sh"]
