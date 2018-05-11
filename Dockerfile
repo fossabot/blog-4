@@ -16,4 +16,6 @@ COPY . .
 
 RUN mkdir /tmp/hugo_cache
 
+EXPOSE 80 443
+
 ENTRYPOINT ["sh", "./docker-entrypoint.sh"]
