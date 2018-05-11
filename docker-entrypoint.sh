@@ -1,7 +1,7 @@
 #!/bin/sh
 
 hugo server \
-    --baseURL http://$(hostname -i) \
+    --baseURL http://codeep.blue \
     --cacheDir /tmp/hugo_cache \
     --bind $(hostname -i) \
     --port 80 \
