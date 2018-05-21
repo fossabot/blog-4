@@ -1,4 +1,4 @@
-FROM golang:alpine
+FROM golang:alpine as builder
 
 # install dependencies
 RUN apk add -U git
@@ -14,8 +14,10 @@ WORKDIR /go/src/github.com/codeepblue/blog
 
 COPY . .
 
-RUN mkdir /tmp/hugo_cache
+RUN hugo
+
+FROM nginx:alpine
+
+COPY --from=builder /go/src/github.com/codeepblue/blog/public /usr/share/nginx/html
 
 EXPOSE 80 443
-
-ENTRYPOINT ["sh", "./docker-entrypoint.sh"]
