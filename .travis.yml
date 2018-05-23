@@ -21,7 +21,4 @@ script:
   - ./hugo
 
 after_success:
-  - curl --ftp-create-dirs
-    -T .
-    --key "${SFTP_KEY}"
-    sftp://${SFTP_USER}:${SFTP_PASSWORD}@codeep.blue/var/www
+  - curl --ftp-create-dirs -T . sftp://${SFTP_USER}:${SFTP_PASSWORD}@codeep.blue/var/www
