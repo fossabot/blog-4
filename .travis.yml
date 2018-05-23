@@ -9,7 +9,6 @@ go:
 
 os:
   - linux
-  fast_finish: true
 
 before_install:
   - sudo apt-get update -qq
