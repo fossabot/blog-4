@@ -18,4 +18,4 @@ script:
   - ./hugo
 
 after_success:
-  - sshpass -p $SFTP_PASSWORD rsync -arvzc ./public/* $SFTP_USER@codeep.blue:/var/www
+  - sshpass -p $SFTP_PASSWORD rsync -e "ssh -o StrictHostKeyChecking=no" -arvzc ./public/* $SFTP_USER@codeep.blue:/var/www
