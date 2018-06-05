@@ -6,11 +6,14 @@
 
 {{ if .IsHome }}
 <meta name="description" content="{{ .Site.Params.description }}">
-<meta property="og:type" content="business.business">
+
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="website">
 <meta property="og:url" content="{{ .Site.BaseURL }}">
 <meta property="og:title" content="{{ .Site.Title }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:description" content="{{ .Site.Params.description }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}images/logo-background.png">
+<meta property="og:image" content="{{ .Site.Params.cover | absURL }}">
 
 <meta property="business:contact_data:locality" content="{{ .Site.Params.businessLocality }}">
 <meta property="business:contact_data:region" content="{{ .Site.Params.businessRegion }}">
