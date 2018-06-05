@@ -1,7 +1,7 @@
 baseURL = "https://codeep.blue/"
 languageCode = "pt-br"
 title = "Codeep.Blue"
-googleAnalytics = "UA-XXXXXXXX-XX"
+googleAnalytics = "UA-108157905-1"
 theme = "blue"
 enableEmoji = true
 
