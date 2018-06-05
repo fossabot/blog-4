@@ -15,7 +15,6 @@ find ./public/ -type f -iname "*.jpg" -exec convert {} -sampling-factor 4:2:0 -s
     --minify-js \
     --minify-ur-ls \
     --quote-character \" \
-    --remove-attribute-quotes \
     --remove-redundant-attributes \
     --remove-script-type-attributes \
     --remove-style-link-type-attributes \
