@@ -6,13 +6,17 @@ theme = "blue"
 enableEmoji = true
 
 [params]
-subtitle = "Simples e descomplicada"
-description = "Desenvolvimento de software é com a gente, saiba mais"
+subtitle = "Desenvolvimento de software descomplicado"
+description = "Desenvolvimento de sistemas. Monitoramento de servidores. Consultoria de projetos de software. Criação de sites. Tudo para você e sua empresa. Solicite aqui."
 recents = 3
 contact = "contact@codeep.blue"
 disqus = "codeepblue"
 dateformat = "02/01/2006"
 logo = "/image/logo.png"
+
+businessLocality = "Blumenau"
+businessRegion = "Santa Catarina"
+businessCountryName = "Brazil"
 
 enableEmoji = true
 enableGitInfo = true

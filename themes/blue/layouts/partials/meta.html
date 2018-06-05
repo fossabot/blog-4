@@ -5,9 +5,15 @@
 
 {{ if .IsHome }}
 <meta name="description" content="{{ .Site.Params.description }}">
+<meta property="og:type" content="business.business">
+<meta property="og:url" content="{{ .Site.BaseURL }}">
 <meta property="og:title" content="{{ .Site.Title }}">
 <meta property="og:description" content="{{ .Site.Params.description }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}images/logo-background.jpg">
+<meta property="og:image" content="{{ .Site.BaseURL }}images/logo-background.png">
+
+<meta property="business:contact_data:locality" content="{{ .Site.Params.businessLocality }}">
+<meta property="business:contact_data:region" content="{{ .Site.Params.businessRegion }}">
+<meta property="business:contact_data:country_name" content="{{ .Site.Params.businessCountryName }}">
 {{ end }}
 
 {{ with .Site.Params.contact }}<meta name="contact" content="{{ . }}">{{ end }}
