@@ -18,7 +18,6 @@ find ./public/ -type f -iname "*.jpg" -exec convert {} -sampling-factor 4:2:0 -s
     --remove-redundant-attributes \
     --remove-script-type-attributes \
     --remove-style-link-type-attributes \
-    --remove-tag-whitespace \
     --sort-attributes \
     --sort-class-name \
     --use-short-doctype \
