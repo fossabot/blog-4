@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# compress PNG images
+find ./public/ -type f -iname "*.png" -exec convert {} -strip {} \;
+
+# compress JPG images
+find ./public/ -type f -iname "*.jpg" -exec convert {} -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace sRGB {} \;
+
+# minify HTML+CSS+JS
 ./node_modules/.bin/html-minifier \
     --collapse-boolean-attributes \
     --collapse-inline-tag-whitespace \
