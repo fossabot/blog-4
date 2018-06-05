@@ -85,13 +85,18 @@
       </div>
     </footer>
     <a href="#" class="p-movetop" title="Ir para o Topo" rel="nofollow"></a>
+
+    <!-- Github Cards Widget -->
     <script async src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 
-    <!-- delayed css load-->
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {{ .Site.Params.jsonld | safeHTML }}
+    </script>
+
+    <!-- Delayed CSS -->
     <noscript id="deferred-styles">
-      {{ with .Site.Params.googlefonts }}
-      <link href="{{ . }}" rel="stylesheet">
-      {{ end }}
+      {{ with .Site.Params.googlefonts }}<link href="{{ . }}" rel="stylesheet">{{ end }}
     </noscript>
     <script>
       var loadDeferredStyles = function() {

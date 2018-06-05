@@ -33,3 +33,19 @@ ampscripts = """
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
     """
+
+jsonld = """
+{
+  "@context": "http://schema.org/",
+  "@type": "Organization",
+  "name": "Codeep.Blue",
+  "address": {
+  "@type": "PostalAddress",
+    "streetAddress": "",
+    "addressLocality": "Blumenau",
+    "addressRegion": "Santa Catarina",
+    "postalCode": ""
+  },
+  "telephone": ""
+}
+"""
