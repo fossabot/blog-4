@@ -18,6 +18,8 @@
 <meta property="business:contact_data:locality" content="{{ .Site.Params.businessLocality }}">
 <meta property="business:contact_data:region" content="{{ .Site.Params.businessRegion }}">
 <meta property="business:contact_data:country_name" content="{{ .Site.Params.businessCountryName }}">
+
+<meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
 {{ end }}
 
 {{ with .Site.Params.contact }}<meta name="contact" content="{{ . }}">{{ end }}
