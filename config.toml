@@ -4,6 +4,8 @@ title = "Codeep.Blue"
 googleAnalytics = "UA-108157905-1"
 theme = "blue"
 enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
 
 [params]
 subtitle = "Desenvolvimento de software descomplicado"
@@ -17,10 +19,6 @@ logo = "/image/logo.png"
 businessLocality = "Blumenau"
 businessRegion = "Santa Catarina"
 businessCountryName = "Brazil"
-
-enableEmoji = true
-enableGitInfo = true
-enableRobotsTXT = true
 
 googlefonts = "https://fonts.googleapis.com/css?family=Open+Sans:400,700"
 fontfamily = "Open Sans,sans-serif"
