@@ -2,6 +2,14 @@
 <meta name="pinterest" content="nopin">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <meta name="theme-color" content="#1489e8">
+
+{{ if .IsHome }}
+<meta name="description" content="{{ .Site.Params.description }}">
+<meta property="og:title" content="{{ .Site.Title }}">
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}images/logo.png">
+{{ end }}
+
 {{ with .Site.Params.contact }}<meta name="contact" content="{{ . }}">{{ end }}
 {{ .Hugo.Generator }}
 
@@ -9,4 +17,3 @@
 {{ with .RSSLink }}<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ . }}">{{ end }}
 
 <link rel="canonical" href="{{ .Permalink }}">
-

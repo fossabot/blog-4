@@ -6,7 +6,8 @@ theme = "blue"
 enableEmoji = true
 
 [params]
-subtitle = "desenvolvimento de software de forma simples e descomplicada"
+subtitle = "Simples e descomplicada"
+description = "Desenvolvimento de software simples e descomplicado é com a gente, entre em contato agora e faça um orçamento, trabalhamos com diversos tipos de projetos de desenvolvimento de software, acesse e saiba mais."
 recents = 3
 contact = "contact@codeep.blue"
 disqus = "codeepblue"
