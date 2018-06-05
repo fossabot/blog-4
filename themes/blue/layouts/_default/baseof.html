@@ -2,9 +2,6 @@
 <html ⚡>
   <head>
     {{ partial "meta.html" . }}
-    {{ with .Site.Params.googlefonts }}
-    <link href="{{ . }}" rel="stylesheet">
-    {{ end }}
     {{ if .IsHome }}
     <title>{{ .Site.Title }} - {{ .Site.Params.Subtitle }}</title>
     {{ else }}
@@ -89,6 +86,26 @@
     </footer>
     <a href="#" class="p-movetop" title="Ir para o Topo" rel="nofollow"></a>
     <script async src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+    <!-- delayed css load-->
+    <noscript id="deferred-styles">
+      {{ with .Site.Params.googlefonts }}
+      <link href="{{ . }}" rel="stylesheet">
+      {{ end }}
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+                var addStylesNode = document.getElementById("deferred-styles");
+                var replacement = document.createElement("div");
+                replacement.innerHTML = addStylesNode.textContent;
+                document.body.appendChild(replacement)
+                addStylesNode.parentElement.removeChild(addStylesNode);
+              };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
   </body>
 </html>
 
