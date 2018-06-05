@@ -9,7 +9,6 @@ find ./public/ -type f -iname "*.jpg" -exec convert {} -sampling-factor 4:2:0 -s
 # minify HTML+CSS+JS
 ./node_modules/.bin/html-minifier \
     --collapse-boolean-attributes \
-    --collapse-inline-tag-whitespace \
     --collapse-whitespace \
     --minify-css \
     --minify-js \
