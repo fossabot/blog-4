@@ -94,17 +94,12 @@
     {{ .Site.Params.jsonld | safeHTML }}
     </script>
 
-    <!-- Delayed CSS -->
-    <noscript id="deferred-styles">
-      {{ with .Site.Params.googlefonts }}<link href="{{ . }}" rel="stylesheet">{{ end }}
-    </noscript>
+    <!-- Deferred Styles -->
     <script>
       var loadDeferredStyles = function() {
-                var addStylesNode = document.getElementById("deferred-styles");
                 var replacement = document.createElement("div");
-                replacement.innerHTML = addStylesNode.textContent;
+                replacement.innerHTML = "{{ with .Site.Params.googlefonts }}<link href=\"{{ . }}\" rel=\"stylesheet\">{{ end }}";
                 document.body.appendChild(replacement)
-                addStylesNode.parentElement.removeChild(addStylesNode);
               };
       var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
