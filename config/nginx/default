@@ -41,6 +41,8 @@ server {
 	listen [::]:443 ssl default_server http2;
 	ssl_certificate /mnt/letsencrypt/archive/codeep.blue/fullchain2.pem;
 	ssl_certificate_key  /mnt/letsencrypt/archive/codeep.blue/privkey2.pem;
+	ssl_client_certificate /mnt/cloudflare/certs/cloudflare-origin-pull-ca.pem;
+	ssl_verify_client on;
 	
 	#
 	# Note: You should disable gzip for SSL traffic.
