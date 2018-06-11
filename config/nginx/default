@@ -39,6 +39,8 @@ server {
 	#
 	listen 443 ssl default_server http2;
 	listen [::]:443 ssl default_server http2;
+
+	ssl_protocols TLSv1.1 TLSv1.2;
 	ssl_certificate /mnt/letsencrypt/archive/codeep.blue/fullchain2.pem;
 	ssl_certificate_key  /mnt/letsencrypt/archive/codeep.blue/privkey2.pem;
 	ssl_client_certificate /mnt/cloudflare/certs/cloudflare-origin-pull-ca.pem;
